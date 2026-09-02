@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[YOUR NAME] — Developer Portfolio</title>
+<meta name="description" content="[YOUR BIO]">
+<meta property="og:title" content="[YOUR NAME] — Developer Portfolio">
+<meta property="og:description" content="[YOUR BIO]">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#07090d;--panel:#0e121a;--panel2:#151a24;--text:#f1f4f8;--muted:#929aa9;--line:#232a36;--a:#8b7cff;--b:#36d9c3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.7 Inter,system-ui,Arial;overflow-x:hidden}a{text-decoration:none;color:inherit}button{font:inherit}
+nav{position:fixed;z-index:10;top:0;left:0;right:0;height:68px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:#07090ddd;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff0a}.brand{font-weight:900}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--a);box-shadow:0 0 15px var(--a);margin-right:9px}nav .links{display:flex;gap:3px;align-items:center}nav a{font-size:12px;color:var(--muted);padding:8px}nav a:hover{color:var(--text)}.menu{display:none;background:var(--panel);color:var(--text);border:1px solid var(--line);padding:8px 11px;border-radius:9px}
+section{padding:105px 7vw;position:relative}.hero{min-height:760px;padding-top:150px;display:grid;grid-template-columns:1.15fr .85fr;gap:7vw;align-items:center;overflow:hidden}.grid{position:absolute;inset:0;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:60px 60px;opacity:.35}.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.18}.oa{width:350px;height:350px;background:var(--a);left:-140px;top:120px}.ob{width:280px;height:280px;background:var(--b);right:-100px;bottom:0}.hero>*:not(.grid):not(.orb){z-index:1}.eyebrow,.mini{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);font-weight:900}.hero h1{font-size:clamp(48px,7vw,92px);line-height:.98;letter-spacing:-.06em;margin:20px 0}.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--text),var(--a));color:transparent;background-clip:text}.hero-title{font-weight:800;font-size:18px}.bio,.lead,p{color:var(--muted)}.bio{max-width:700px;font-size:17px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.btn{padding:11px 16px;border-radius:11px;border:1px solid var(--line);font-weight:800}.primary{background:var(--text);color:var(--bg);border-color:var(--text)}.btn:hover{transform:translateY(-2px)}.hero-card,.card,.box{background:linear-gradient(145deg,#fff8,transparent),var(--panel);border:1px solid var(--line);border-radius:23px;box-shadow:0 25px 70px #0008}.hero-card{padding:28px}.avatar{width:145px;height:145px;border-radius:25px;object-fit:cover;background:var(--panel2);border:1px solid var(--line)}.hero-card h3{font-size:23px;line-height:1.25}.code{background:#05070a;border:1px solid var(--line);padding:15px;border-radius:14px;overflow:auto;color:#aab3c2;font-size:12px}
+.wrap{max-width:1180px;margin:auto}.head{margin-bottom:35px}.head>span{color:var(--a);font-size:10px;font-weight:900;letter-spacing:.18em}.head h2{font-size:clamp(35px,5vw,58px);line-height:1.05;letter-spacing:-.05em;margin:9px 0}.about{display:grid;grid-template-columns:1.3fr .7fr;gap:7vw}.lead{font-size:21px;line-height:1.55}.facts{display:grid;gap:1px;background:var(--line);border-radius:15px;overflow:hidden}.fact{background:var(--panel);padding:14px;display:flex;justify-content:space-between;gap:10px}.fact span{font-size:11px;color:var(--muted)}.fact strong{font-size:12px;text-align:right}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{padding:23px;min-height:220px;transition:.2s}.card:hover{transform:translateY(-5px);border-color:#8b7cff55}.icon{font-size:23px;color:var(--a)}.card h3{margin:18px 0 7px}.card p{font-size:13px}.card a{font-size:12px;color:var(--a)}
+.skill{margin:25px 0}.skill h3{font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{border:1px solid var(--line);background:var(--panel);padding:8px 12px;border-radius:999px;font-size:11px;color:var(--muted)}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:20px}.box{padding:25px}.price{padding-bottom:15px;border-bottom:1px solid var(--line)}.price b{font-size:10px;letter-spacing:.15em;color:var(--b)}.price h3{margin:6px 0;font-size:25px}.service{display:flex;justify-content:space-between;gap:15px;padding:14px 0;border-bottom:1px solid var(--line)}.service small{display:block;color:var(--muted);font-size:10px}.badge{font-size:9px;border:1px solid var(--line);padding:4px 7px;border-radius:99px;height:max-content;color:var(--a)}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.project{overflow:hidden}.project img{width:100%;height:210px;object-fit:cover}.project div{padding:20px}.project h3{margin:6px 0;font-size:24px}
+.timeline{max-width:900px;margin:auto;display:grid;gap:10px}.mile{display:grid;grid-template-columns:55px 1fr;gap:20px;padding:17px;border:1px solid var(--line);background:var(--panel);border-radius:14px}.mile strong{color:var(--a);font-size:12px}.mile h3{margin:0;font-size:15px}
+.goal{background:radial-gradient(circle at 20% 30%,#8b7cff1c,transparent 35%),radial-gradient(circle at 80% 70%,#36d9c31b,transparent 35%)}.goalbox{max-width:1000px;margin:auto;padding:55px;border:1px solid var(--line);border-radius:28px;background:#fff4}.goalbox p{font-size:23px}.goals{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:25px;color:var(--muted);font-size:13px}
+.discord{display:grid;grid-template-columns:1fr 1fr;gap:40px}.discord .box{padding:25px}.info{padding:11px 0;border-bottom:1px solid var(--line)}.info small{display:block;color:var(--muted)}.community{display:grid;grid-template-columns:1fr 1fr;gap:10px}.community div{padding:15px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.social{padding:20px;display:flex;align-items:center;gap:13px;border:1px solid var(--line);background:var(--panel);border-radius:17px}.social i{width:40px;height:40px;border-radius:11px;background:var(--panel2);display:grid;place-items:center;font-style:normal;font-weight:900}.social h3{margin:0}.social small{color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:7vw;background:var(--panel)}.contact h2{font-size:clamp(40px,5vw,65px);line-height:1;letter-spacing:-.05em}.email{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:17px;border-bottom:1px solid var(--line)}.copy{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:8px 11px;border-radius:8px;cursor:pointer}.links{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.link{border:1px solid var(--line);padding:8px 11px;border-radius:9px;font-size:11px;color:var(--muted)}
+footer{padding:28px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:11px}#toast{position:fixed;z-index:50;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--text);color:var(--bg);padding:9px 14px;border-radius:9px;opacity:0;transition:.2s}#toast.show{opacity:1}.top{position:fixed;right:20px;bottom:20px;display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);width:40px;height:40px;border-radius:10px}.empty{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:15px}
+@media(max-width:1050px){nav .links a{display:none}.menu{display:block}.links.open{position:absolute;top:68px;left:5vw;right:5vw;display:flex!important;flex-direction:column;align-items:stretch;padding:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.links.open a{display:block}.hero{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.socials{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){section{padding:80px 5vw}.hero{padding-top:120px}.hero h1{font-size:51px}.about,.pricing,.projects,.discord,.contact{grid-template-columns:1fr}.cards,.socials,.community{grid-template-columns:1fr}.goals{grid-template-columns:1fr}.goalbox{padding:30px}.email{flex-direction:column;align-items:flex-start}footer{flex-direction:column;gap:7px}}
+</style>
+</head>
+<body>
+<nav><a class="brand" href="#home"><span class="dot"></span><span id="nameNav">[YOUR NAME]</span></a><button class="menu" id="menu">☰</button><div class="links" id="navLinks"><a href="#home">Home</a><a href="#about">About</a><a href="#services">What I Do</a><a href="#skills">Skills</a><a href="#pricing">Services</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#goal">Goal</a><a href="#socials">Socials</a><a href="#contact">Contact</a></div></nav>
+
+<section id="home" class="hero"><div class="grid"></div><div class="orb oa"></div><div class="orb ob"></div><div><span class="eyebrow">DEVELOPER • CREATOR</span><h1 id="name">[YOUR NAME]<br><em>Developer • Creator</em></h1><div class="hero-title" id="title">Developer • Discord Specialist • Minecraft Server Developer</div><p class="bio" id="bio">I am a developer and digital creator interested in websites, Discord systems, bots, templates, Minecraft servers, coding, and online communities. I enjoy learning new technologies, building useful projects, and improving my skills every day.</p><div class="actions"><a class="btn primary" href="#projects">Explore My Work ↗</a><a class="btn" href="#pricing">My Services</a><a class="btn" href="#contact">Contact Me</a></div><div id="heroSocials" class="links"></div></div><div class="hero-card"><img id="avatar" class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%23151a24'/%3E%3Ccircle cx='250' cy='190' r='85' fill='%23232a36'/%3E%3Cpath d='M100 430c15-105 78-145 150-145s135 40 150 145' fill='%23232a36'/%3E%3Ctext x='250' y='470' text-anchor='middle' font-family='Arial' font-size='22' fill='%23929aa9'%3EYOUR PHOTO%3C/text%3E%3C/svg%3E" alt="Profile picture"><h3>Building useful digital projects through continuous learning.</h3><div class="code"><pre>const focus = [
+  "Web Development",
+  "Discord Systems",
+  "Minecraft Projects",
+  "Continuous Learning"
+];</pre></div></div></section>
+
+<section id="about"><div class="wrap"><div class="head"><span>01 / ABOUT</span><h2>Who I am</h2></div><div class="about"><div><p class="lead">I am a developer who enjoys working on websites, Discord systems, bots, templates, Minecraft servers, and different kinds of digital projects. I like experimenting with new technologies, solving problems, and learning through real projects.</p><p>Sometimes I take a little help from AI tools when I am stuck or need to understand something faster. I use AI as a learning and productivity assistant, while I continue to learn, understand, modify, and improve the code myself.</p></div><div class="facts" id="facts"></div></div></div></section>
+
+<section id="services"><div class="wrap"><div class="head"><span>02 / CAPABILITIES</span><h2>What I Do</h2><p>Practical digital work across web, Discord, Minecraft and communities.</p></div><div class="cards" id="capabilities"></div></div></section>
+
+<section id="skills"><div class="wrap"><div class="head"><span>03 / SKILLS</span><h2>Tools & capabilities</h2><p>No artificial percentages — just an honest view.</p></div><div id="skillsBox"></div></div></section>
+
+<section id="pricing"><div class="wrap"><div class="head"><span>04 / SERVICES</span><h2>Free, paid & custom</h2><p>Pricing is configurable. Unconfigured prices show “Contact for pricing”.</p></div><div class="pricing"><div class="box"><div class="price"><b>FREE</b><h3>Community help</h3></div><div id="free"></div></div><div class="box"><div class="price"><b>PAID / CUSTOM</b><h3>Project work</h3></div><div id="paid"></div></div></div></div></section>
+
+<section id="projects"><div class="wrap"><div class="head"><span>05 / SELECTED WORK</span><h2>Projects</h2><p>Only projects manually added by you appear here.</p></div><div class="projects" id="projectsBox"></div></div></section>
+
+<section id="journey"><div class="wrap"><div class="head"><span>06 / JOURNEY</span><h2>My Developer Journey</h2></div><div class="timeline" id="journeyBox"></div></div></section>
+
+<section id="goal" class="goal"><div class="goalbox"><span class="eyebrow">LONG-TERM DIRECTION</span><h2>My Goal</h2><p>To become a highly skilled and successful developer.</p><div class="goals" id="goals"></div></div></section>
+
+<section><div class="wrap"><div class="head"><span>07 / NOW</span><h2>Currently Working On</h2></div><div class="tags" id="focus"></div></div></section>
+
+<section><div class="wrap"><div class="box"><span class="mini">WORKFLOW</span><h2>AI-Assisted Development</h2><p>I sometimes use AI tools as a development assistant when I need help understanding a problem, exploring an idea, debugging, or learning something new. AI helps me work faster and learn, but my goal is to understand the technology and continuously improve my own development skills.</p></div></div></section>
+
+<section><div class="wrap discord"><div><div class="head"><span>08 / PLATFORM SPECIALTY</span><h2>Discord</h2></div><p>Discord is one of the main platforms I work with. I build bots, configure servers, create moderation systems, and help communities organize their Discord environments.</p></div><div class="box" id="discord"></div></div></section>
+
+<section><div class="wrap"><div class="head"><span>09 / MINECRAFT</span><h2>Minecraft work</h2></div><div class="tags" id="minecraft"></div></div></section>
+
+<section><div class="wrap"><div class="head"><span>10 / COMMUNITY</span><h2>Community & Moderation</h2></div><div class="community" id="community"></div></div></section>
+
+<section id="socials"><div class="wrap"><div class="head"><span>11 / CONNECT</span><h2>Find Me Online</h2><p>Only configured accounts are shown.</p></div><div class="socials" id="socialsBox"></div></div></section>
+
+<section id="contact" class="contact"><div><span class="eyebrow">LET'S CONNECT</span><h2>Have a project in mind?</h2><p>For custom work, collaborations or questions, use the contact details below.</p></div><div class="box"><div class="email"><strong id="email">[YOUR EMAIL]</strong><button class="copy" id="copy">Copy Email</button></div><div class="links" id="contactLinks"></div></div></section>
+<footer><span><strong id="footerName">[YOUR NAME]</strong> — Developer • Creator • Discord Specialist</span><span>Built with one HTML file.</span></footer><div id="toast">Email copied!</div><button class="top" id="top">↑</button>
+
+<script>
+/* ===================== EDIT THIS CONFIG ONLY ===================== */
+const CONFIG={
+name:"[YOUR NAME]",username:"[YOUR USERNAME]",location:"[YOUR LOCATION]",
+title:"Developer • Discord Specialist • Minecraft Server Developer",
+bio:"I am a developer and digital creator interested in websites, Discord systems, bots, templates, Minecraft servers, coding, and online communities. I enjoy learning new technologies, building useful projects, and improving my skills every day.",
+email:"[YOUR EMAIL]",
+avatar:"", // Put an image URL here, or leave empty for the built-in placeholder.
+socials:{
+Facebook:"",TikTok:"",Instagram:"",YouTube:"",Discord:"",GitHub:"",Telegram:"",X:"",Reddit:"",Other:""
+},
+discord:{username:"[YOUR DISCORD USERNAME]",displayName:"[YOUR DISCORD DISPLAY NAME]",id:"",profile:"",server:""},
+capabilities:[
+["Website Developer","Modern responsive websites, landing pages, portfolios and web projects.","◈"],
+["Discord Bot Developer","Bots for moderation, utility, automation, communities and management.","⌘"],
+["Coding / Programming","Programming and web technologies with continuous skill development.","</>"],
+["Template Developer","Website, Discord UI and reusable digital templates.","▦"],
+["Discord Setup Developer","Channels, roles, permissions, bots, moderation and community structure.","⚙"],
+["Facebook Group Moderator","Community support and moderation for online groups.","◎"],
+["Minecraft Server Developer","Server development, configuration, plugins, systems and optimization.","◆"],
+["Digital Project Developer","Custom online and digital projects based on requirements.","✦"]
+],
+skills:{
+"Comfortable With":["HTML","CSS","JavaScript","Node.js","Discord.js","Discord Bot Development","Web Development","Responsive Design","Website Templates","Discord Server Setup","Git/GitHub","API Integration"],
+"Learning":["UI/UX","Discord Moderation Systems","Minecraft Server Development","Minecraft Server Configuration","Automation","Problem Solving"],
+"Currently Exploring":[]
+},
+services:[
+["Basic Discord server setup","Free","Free"],["Basic Discord configuration","Free","Free"],["Simple website assistance","Free","Free"],["Basic troubleshooting","Free","Free"],["Community assistance","Free","Free"],["Small coding assistance","Free","Free"],["Basic template customization","Free","Free"],
+["Advanced website development","Paid","Contact for pricing"],["Custom Discord bot development","Paid","Contact for pricing"],["Advanced Discord server setup","Paid","Contact for pricing"],["Custom templates","Custom","Contact for pricing"],["Minecraft server development","Paid","Contact for pricing"],["Advanced automation","Custom","Contact for pricing"],["Custom systems","Custom","Contact for pricing"],["Large digital projects","Custom","Contact for pricing"]
+],
+projects:[], /* Add only real projects. Example: {name:"Project",description:"Real description",category:"Website",status:"Completed",image:"IMAGE URL",technologies:["HTML","CSS"],demo:"",github:"",discord:""} */
+journey:["Started learning coding","Started building websites","Started working with Discord","Started developing Discord bots","Started working with Minecraft servers","Started creating templates","Started working on larger projects","Continuously learning and improving"],
+goals:["Improve my coding skills","Build larger projects","Learn advanced technologies","Create useful products","Work with more people","Build a strong developer portfolio","Become a professional developer","Continue learning throughout my journey"],
+focus:["Web Development","Discord Bot Development","Minecraft Server Development","Discord Server Systems","Templates","Coding","Learning new technologies"],
+minecraft:["Minecraft server development","Server configuration","Plugins","Server systems","Optimization","Community systems","Server management","Custom server features"],
+community:["Discord community management","Discord server setup","Moderation","Facebook group moderation","Role and permission organization","Community structure","Bot-based automation"]
+};
+/* ================================================================ */
+
+const $=s=>document.querySelector(s), esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+function openLink(u,text){return u?`<a class="link" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(text)} ↗</a>`:""}
+$("#name").innerHTML=esc(CONFIG.name)+"<br><em>Developer • Creator</em>";$("#nameNav").textContent=CONFIG.name;$("#footerName").textContent=CONFIG.name;$("#title").textContent=CONFIG.title;$("#bio").textContent=CONFIG.bio;$("#email").textContent=CONFIG.email;
+if(CONFIG.avatar)$("#avatar").src=CONFIG.avatar;
+$("#facts").innerHTML=[["Username",CONFIG.username],["Location",CONFIG.location],["Status","Continuously learning"],["Focus","Web • Discord • Minecraft"],["Interests","Coding • Communities"],["Goal","Professional developer"]].map(x=>`<div class="fact"><span>${esc(x[0])}</span><strong>${esc(x[1])}</strong></div>`).join("");
+const socials=Object.entries(CONFIG.socials).filter(([,u])=>u);
+$("#socialsBox").innerHTML=socials.length?socials.map(([n,u])=>`<div class="social"><i>${esc(n[0])}</i><div><h3>${esc(n)}</h3><small>Configured profile</small></div>${openLink(u,"Open")}</div>`).join(""):`<div class="empty">Configure your social links in CONFIG above.</div>`;
+$("#heroSocials").innerHTML=socials.slice(0,5).map(([n,u])=>openLink(u,n)).join("");
+$("#contactLinks").innerHTML=socials.map(([n,u])=>openLink(u,n)).join("");
+$("#capabilities").innerHTML=CONFIG.capabilities.map(c=>`<article class="card"><div class="icon">${esc(c[2])}</div><h3>${esc(c[0])}</h3><p>${esc(c[1])}</p><a href="#pricing">View service →</a></article>`).join("");
+$("#skillsBox").innerHTML=Object.entries(CONFIG.skills).filter(([,a])=>a.length).map(([n,a])=>`<div class="skill"><h3>${esc(n)}</h3><div class="tags">${a.map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`).join("");
+function service(s){return `<div class="service"><div><strong>${esc(s[0])}</strong><small>${esc(s[2]||"Contact for pricing")}</small></div><span class="badge">${esc(s[1])}</span></div>`}
+$("#free").innerHTML=CONFIG.services.filter(s=>s[1].toLowerCase()==="free").map(service).join("");
+$("#paid").innerHTML=CONFIG.services.filter(s=>s[1].toLowerCase()!=="free").map(service).join("");
+$("#projectsBox").innerHTML=CONFIG.projects.length?CONFIG.projects.map(p=>`<article class="card project">${p.image?`<img src="${esc(p.image)}" loading="lazy" alt="${esc(p.name)}">`:""}<div><span class="mini">${esc(p.category||"Project")} · ${esc(p.status||"")}</span><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p><div class="tags">${(p.technologies||[]).map(t=>`<span>${esc(t)}</span>`).join("")}</div><div class="links">${openLink(p.demo,"Demo")}${openLink(p.github,"GitHub")}${openLink(p.discord,"Discord")}</div></div></article>`).join(""):`<div class="empty">Projects are currently being updated.</div>`;
+$("#journeyBox").innerHTML=CONFIG.journey.map((x,i)=>`<div class="mile"><strong>${String(i+1).padStart(2,"0")}</strong><div><h3>${esc(x)}</h3><span class="mini">Editable milestone</span></div></div>`).join("");
+$("#goals").innerHTML=CONFIG.goals.map(x=>`<div>✓ ${esc(x)}</div>`).join("");
+$("#focus").innerHTML=CONFIG.focus.map(x=>`<span>${esc(x)}</span>`).join("");$("#minecraft").innerHTML=CONFIG.minecraft.map(x=>`<span>◆ ${esc(x)}</span>`).join("");$("#community").innerHTML=CONFIG.community.map(x=>`<div>✓ ${esc(x)}</div>`).join("");
+const d=CONFIG.discord;$("#discord").innerHTML=`<div class="info"><small>Username</small><strong>${esc(d.username)}</strong></div><div class="info"><small>Display name</small><strong>${esc(d.displayName)}</strong></div>${d.id?`<div class="info"><small>Discord ID</small><strong>${esc(d.id)}</strong></div>`:""}<div class="links">${openLink(d.profile,"Discord profile")}${openLink(d.server,"Server")}</div>`;
+$("#copy").onclick=async()=>{if(!CONFIG.email||CONFIG.email.includes("YOUR"))return toast("Configure your email first");try{await navigator.clipboard.writeText(CONFIG.email);toast("Email copied!")}catch{toast("Copy failed")}};
+function toast(x){$("#toast").textContent=x;$("#toast").classList.add("show");setTimeout(()=>$("#toast").classList.remove("show"),1700)}
+$("#menu").onclick=()=>$("#navLinks").classList.toggle("open");document.querySelectorAll("#navLinks a").forEach(a=>a.onclick=()=>$("#navLinks").classList.remove("open"));$("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});addEventListener("scroll",()=>$("#top").style.display=scrollY>500?"block":"none");
+</script>
+</body></html>
