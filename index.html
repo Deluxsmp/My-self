@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[YOUR NAME] — Developer Portfolio</title>
+<meta name="description" content="Personal developer portfolio — websites, Discord bots, Minecraft servers and digital projects.">
+<meta name="theme-color" content="#070a12">
+<style>
+:root{--bg:#060810;--panel:rgba(15,20,34,.72);--panel2:rgba(20,27,45,.58);--text:#f5f7ff;--muted:#9aa4bd;--line:rgba(255,255,255,.09);--accent:#8b7cff;--accent2:#36d1dc;--shadow:0 24px 80px rgba(0,0,0,.42);--r:24px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.bg{position:fixed;inset:0;z-index:-2;overflow:hidden;background:radial-gradient(circle at 15% 15%,rgba(139,124,255,.13),transparent 32%),radial-gradient(circle at 85% 25%,rgba(54,209,220,.10),transparent 30%),linear-gradient(145deg,#05070d,#090d18 55%,#060810)}
+.bg:before{content:"";position:absolute;inset:-30%;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;transform:rotate(8deg);mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 80%,transparent);animation:grid 28s linear infinite}
+.orb{position:absolute;border-radius:50%;filter:blur(65px);opacity:.34;animation:float 12s ease-in-out infinite}.o1{width:300px;height:300px;background:#7667ff;left:-100px;top:10%}.o2{width:250px;height:250px;background:#24c9d8;right:-80px;top:42%;animation-delay:-4s}.o3{width:220px;height:220px;background:#9b4dff;left:45%;bottom:-100px;animation-delay:-8s}
+@keyframes grid{to{transform:translate3d(55px,55px) rotate(8deg)}}@keyframes float{50%{transform:translate(35px,-28px) scale(1.08)}}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+header{position:sticky;top:0;z-index:20;background:rgba(6,8,16,.64);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.5px}.brand span{color:var(--accent)}.links{display:flex;gap:24px;align-items:center}.links a{font-size:14px;color:#cbd2e4;transition:.2s}.links a:hover{color:#fff}.menu{display:none;background:none;border:0;color:#fff;font-size:25px}
+.hero{min-height:88vh;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center;padding:80px 0}.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:999px;color:#cfd6e9;font-size:13px;margin-bottom:20px}.hero h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-3px;margin-bottom:22px}.gradient{background:linear-gradient(100deg,#fff 15%,#a69bff 50%,#55dce5 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:650px;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.045);font-weight:750;font-size:14px;transition:.25s}.btn:hover{transform:translateY(-3px);border-color:rgba(139,124,255,.5);box-shadow:0 12px 35px rgba(0,0,0,.25)}.primary{background:linear-gradient(135deg,#8b7cff,#5f9dff);border:0}
+.photo-card{position:relative;aspect-ratio:1/1.08;border-radius:32px;padding:10px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.025));box-shadow:var(--shadow);animation:rise .9s ease both}.photo-card:after{content:"";position:absolute;inset:-1px;border-radius:32px;background:linear-gradient(135deg,rgba(139,124,255,.5),transparent 42%,rgba(54,209,220,.35));z-index:-1;filter:blur(1px)}.photo{width:100%;height:100%;object-fit:cover;border-radius:25px;background:#111727;display:block}.photo-placeholder{display:grid;place-items:center;color:#727c95;text-align:center;padding:25px}
+section{padding:95px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8f99b3;font-weight:800}.section-head h2{font-size:clamp(30px,5vw,48px);line-height:1.05;letter-spacing:-1.5px;margin-top:8px}.section-head p{max-width:520px;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 15px 50px rgba(0,0,0,.16);transition:.3s}.card:hover{transform:translateY(-5px);border-color:rgba(139,124,255,.25)}.icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(139,124,255,.11);margin-bottom:16px;font-size:19px}.card h3{font-size:17px;margin-bottom:7px}.card p,.card li{color:var(--muted);font-size:14px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chip{font-size:12px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:#cbd3e6;background:rgba(255,255,255,.025)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center}.mini-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-photos .photo-card{aspect-ratio:1}.mini-photos .photo-card:first-child{grid-row:span 2;aspect-ratio:auto}.timeline{border-left:1px solid var(--line);padding-left:25px;display:grid;gap:22px}.step{position:relative}.step:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--accent);left:-30px;top:9px;box-shadow:0 0 18px var(--accent)}.step strong{display:block;margin-bottom:4px}.muted{color:var(--muted)}.wide{grid-column:span 2}.socials{display:flex;flex-wrap:wrap;gap:10px}.socials a{padding:10px 14px;border:1px solid var(--line);border-radius:12px;color:#d7dcef;background:rgba(255,255,255,.03);font-size:13px;transition:.2s}.socials a:hover{transform:translateY(-2px);border-color:rgba(54,209,220,.4)}
+.contact{display:grid;grid-template-columns:1fr .8fr;gap:18px}.contact .card{min-height:230px}.footer{border-top:1px solid var(--line);padding:28px 0;color:#788198;font-size:13px}.back{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:rgba(10,14,24,.8);color:#fff;display:none;z-index:15}.reveal{opacity:0;transform:translateY(18px)}.reveal.show{animation:rise .7s ease forwards}
+@media(max-width:850px){.links{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 4%;background:rgba(6,8,16,.96);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding:65px 0}.photo-card{max-width:520px;margin:auto}.grid{grid-template-columns:1fr 1fr}.wide{grid-column:span 2}.about,.contact{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.wide{grid-column:span 1}.hero h1{letter-spacing:-2px}.hero{min-height:auto;padding:55px 0 30px}section{padding:70px 0}.mini-photos{grid-template-columns:1fr}.mini-photos .photo-card:first-child{grid-row:auto;aspect-ratio:1}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="bg"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
+<header><nav class="wrap"><a class="brand" href="#">[YOUR <span>NAME</span>]</a><button class="menu" aria-label="Menu">☰</button><div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></nav></header>
+
+<main>
+<section class="hero wrap">
+<div>
+<div class="eyebrow">● Available for selected projects</div>
+<h1>Building <span class="gradient">digital experiences</span> that feel different.</h1>
+<p>[YOUR SHORT BIO] — Website developer, Discord bot developer, Minecraft server developer and digital creator.</p>
+<div class="actions"><a class="btn primary" href="#projects">View my work</a><a class="btn" href="#contact">Let's connect</a></div>
+</div>
+<div class="photo-card"><img class="photo" src="YOUR_PHOTO_LINK_1" alt="Profile photo" onerror="this.outerHTML='<div class=&quot;photo photo-placeholder&quot;>YOUR PHOTO<br><small>Replace YOUR_PHOTO_LINK_1</small></div>'"></div>
+</section>
+
+<section id="about"><div class="wrap about">
+<div class="mini-photos">
+<div class="photo-card"><img class="photo" src="YOUR_PHOTO_LINK_2" alt="Personal photo" onerror="this.outerHTML='<div class=&quot;photo photo-placeholder&quot;>PHOTO 2</div>'"></div>
+<div class="photo-card"><img class="photo" src="YOUR_PHOTO_LINK_3" alt="Personal photo" onerror="this.outerHTML='<div class=&quot;photo photo-placeholder&quot;>PHOTO 3</div>'"></div>
+<div class="photo-card"><img class="photo" src="YOUR_PHOTO_LINK_4" alt="Personal photo" onerror="this.outerHTML='<div class=&quot;photo photo-placeholder&quot;>PHOTO 4</div>'"></div>
+</div>
+<div class="reveal"><div class="kicker">01 — About</div><h2>A developer focused on useful, polished things.</h2><p class="muted" style="margin-top:18px">Write your real story here. Keep it honest, short and personal. Mention what you build, what you enjoy learning, and what kind of projects you want to work on.</p><div class="chips"><span class="chip">Web Development</span><span class="chip">Discord</span><span class="chip">Minecraft</span><span class="chip">Coding</span><span class="chip">Communities</span></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">02 — Skills</div><h2>What I work with.</h2></div><p>Replace these with your actual technologies and skills. No fake claims.</p></div><div class="grid">
+<div class="card reveal"><div class="icon">⌘</div><h3>Web Development</h3><p>Modern responsive websites, landing pages and personal brands.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
+<div class="card reveal"><div class="icon">◈</div><h3>Discord Development</h3><p>Public Discord bots, slash commands, moderation and server systems.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">discord.js</span><span class="chip">SQLite</span></div></div>
+<div class="card reveal"><div class="icon">◆</div><h3>Minecraft</h3><p>Server setup, configuration, communities and custom digital systems.</p><div class="chips"><span class="chip">Server Setup</span><span class="chip">Plugins</span><span class="chip">Management</span></div></div>
+</div></div></section>
+
+<section id="services"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">03 — Services</div><h2>Things I can build.</h2></div><p>Customize the offers and pricing before publishing.</p></div><div class="grid">
+<div class="card reveal"><div class="icon">01</div><h3>Website Development</h3><p>Personal websites, portfolios and clean responsive pages.</p></div>
+<div class="card reveal"><div class="icon">02</div><h3>Discord Bot Development</h3><p>Custom bots with commands, moderation, utility and database systems.</p></div>
+<div class="card reveal"><div class="icon">03</div><h3>Discord Server Setup</h3><p>Channels, roles, permissions, automation and community structure.</p></div>
+<div class="card reveal"><div class="icon">04</div><h3>Minecraft Server Setup</h3><p>Professional server structure and configuration.</p></div>
+<div class="card reveal"><div class="icon">05</div><h3>Templates</h3><p>Reusable website, Discord and digital templates.</p></div>
+<div class="card reveal"><div class="icon">06</div><h3>Custom Projects</h3><p>Have an idea? Add your own project details and contact method.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">04 — Projects</div><h2>Selected work.</h2></div><p>Add real projects here. Each card can link to GitHub, a live demo or Discord.</p></div><div class="grid">
+<div class="card wide reveal"><div class="icon">↗</div><h3>Project One — Add your real project</h3><p>Short description of what you built, your role, technologies and the result.</p><div class="actions"><a class="btn" href="YOUR_PROJECT_LINK_1">Live project</a><a class="btn" href="YOUR_GITHUB_LINK_1">Source</a></div></div>
+<div class="card reveal"><div class="icon">↗</div><h3>Project Two</h3><p>Replace with your second real project.</p></div>
+<div class="card reveal"><div class="icon">↗</div><h3>Project Three</h3><p>Replace with your third real project.</p></div>
+</div></div></section>
+
+<section id="journey"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">05 — Journey</div><h2>Still learning. Still building.</h2></div><p>A simple timeline makes your growth feel real without pretending everything is finished.</p></div><div class="card timeline reveal">
+<div class="step"><strong>Started coding</strong><span class="muted">Add your year and what you started with.</span></div>
+<div class="step"><strong>Built first website</strong><span class="muted">Add your first meaningful milestone.</span></div>
+<div class="step"><strong>Started Discord development</strong><span class="muted">Add the point where you began building bots/systems.</span></div>
+<div class="step"><strong>Expanded into Minecraft & communities</strong><span class="muted">Add your actual experience.</span></div>
+<div class="step"><strong>Current focus</strong><span class="muted">Add what you're learning and building now.</span></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="grid">
+<div class="card wide reveal"><div class="kicker">06 — Vision</div><h2 style="margin-top:8px">Build better. Learn faster. Keep it authentic.</h2><p class="muted" style="margin-top:12px">Use this area for your long-term goal, current focus and the kind of developer you want to become.</p></div>
+<div class="card reveal"><h3>Current Focus</h3><ul style="list-style:none;margin-top:12px;display:grid;gap:8px"><li>→ Better UI/UX</li><li>→ Production Node.js</li><li>→ Discord systems</li><li>→ Database design</li></ul></div>
+<div class="card reveal"><h3>AI-Assisted Development</h3><p style="margin-top:10px">I use modern tools, including AI assistance, to learn, prototype, debug and improve projects while keeping the final work understandable and maintained.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="grid">
+<div class="card reveal"><div class="icon">D</div><h3>Discord</h3><p>Your Discord profile, community or bot information.</p><div class="actions"><a class="btn primary" href="YOUR_DISCORD_PROFILE_LINK">Discord Profile</a><a class="btn" href="YOUR_DISCORD_SERVER_LINK">My Server</a></div></div>
+<div class="card reveal"><div class="icon">M</div><h3>Minecraft</h3><p>Show your server projects, builds, communities or development work.</p><div class="chips"><span class="chip">Server Setup</span><span class="chip">Community</span><span class="chip">Development</span></div></div>
+<div class="card reveal"><div class="icon">C</div><h3>Community</h3><p>Moderation, management, Discord communities and online projects.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">07 — Contact</div><h2>Let's build something useful.</h2></div><p>Replace the links below with your real accounts. Don't publish private information.</p></div><div class="contact">
+<div class="card reveal"><h3>Find me online</h3><p class="muted" style="margin:8px 0 18px">Social links are intentionally placeholders so you can add them later.</p><div class="socials">
+<a href="YOUR_GITHUB_LINK">GitHub</a><a href="YOUR_DISCORD_PROFILE_LINK">Discord</a><a href="YOUR_YOUTUBE_LINK">YouTube</a><a href="YOUR_FACEBOOK_LINK">Facebook</a><a href="YOUR_INSTAGRAM_LINK">Instagram</a><a href="YOUR_TIKTOK_LINK">TikTok</a><a href="YOUR_TELEGRAM_LINK">Telegram</a><a href="YOUR_X_LINK">X</a>
+</div></div>
+<div class="card reveal"><h3>Email</h3><p class="muted" style="margin:8px 0 18px">your@email.com</p><a class="btn primary" href="mailto:YOUR_EMAIL">Email me</a></div>
+</div></div></section>
+</main>
+
+<footer class="footer"><div class="wrap">© <span id="year"></span> [YOUR NAME]. Built with care.</div></footer>
+<button class="back" aria-label="Back to top">↑</button>
+<script>
+const menu=document.querySelector('.menu'),links=document.querySelector('.links');
+menu.onclick=()=>links.classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+document.getElementById('year').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+const back=document.querySelector('.back');addEventListener('scroll',()=>back.style.display=scrollY>500?'grid':'none');back.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
